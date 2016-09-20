@@ -82,7 +82,6 @@ public class clsJuego {
     }
 
     class CapaDelFrente extends Layer {
-        Size PantallaDelDispositivo;
         Sprite NaveJugador;
         Label lblNombreJuego;
         ArrayList<Sprite> arrEnemigos;
@@ -123,8 +122,8 @@ public class clsJuego {
             NaveJugador = Sprite.sprite("rocket_mini.png");
 
             float PosicionInicialX, PosicionInicialY;
-            PosicionInicialX = PantallaDelDispositivo.getWidth() / 2;
-            PosicionInicialY = PantallaDelDispositivo.getHeight() / 2;
+            PosicionInicialX = PantallaDelDispositivo.width / 2;
+            PosicionInicialY = PantallaDelDispositivo.height / 2;
             NaveJugador.setPosition(100, 300);
             NaveJugador.setPosition(PosicionInicialX, PosicionInicialY);
             super.addChild(NaveJugador);
@@ -234,11 +233,11 @@ public class clsJuego {
             void DetectarColisiones(){
                 boolean HuboAlgunaColision;
                 HuboAlgunaColision = false;
-                for (Sprite UnEnemigoAVerificar: arrEnemigos){
-                    if (InterseccionEntreSprites(NaveJugador,UnEnemigoAVerificar)){
-                    HuboAlgunaColision = true;
-                    }
-                }
+//                for (Sprite UnEnemigoAVerificar: arrEnemigos){
+                 //   if (InterseccionEntreSprites(NaveJugador,UnEnemigoAVerificar)){
+                 //   HuboAlgunaColision = true;
+                  //  }
+  //              }
                 if (HuboAlgunaColision==true){
 
                 }else{
